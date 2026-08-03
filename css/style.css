@@ -1,0 +1,59 @@
+body {
+    background-image: url("infa_3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+.login{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    transform: translateY(-150px);
+}
+
+
+
+
+
+
+
+
+.login h1 {
+    color:black;
+    text-align: center;
+    font-size: 30px;
+}
+
+.login input {
+    width: 350px;
+    font-size: 20px;
+}
+.login button{
+    font-size: 33px;
+    background-color: rgb(59, 130, 246);
+    transform: translateY(-5px);
+    border-radius: 22px;
+    padding: 3px;
+    color: white;
+}
+button:hover {
+    background-color: #1b65c2;
+}
+
+.login {
+    background-color:white;
+    padding: 40px;
+    border-radius: 20px;
+}
