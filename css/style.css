@@ -1,5 +1,5 @@
 body {
-    background-image: url("infa_3.png");
+    background-image: url("../images/infa_3.png");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -19,7 +19,7 @@ body {
 .login{
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    gap: 15px;
     transform: translateY(-150px);
 }
 
@@ -56,4 +56,22 @@ button:hover {
     background-color:white;
     padding: 40px;
     border-radius: 20px;
+}
+.new_ac{
+    display: flex;
+    justify-content: center;
+    color: #1b65c2;
+    font-size: 18px;
+    transform: translateY(10px);
+    
+}
+.new_ac:hover{
+    color: rgb(138, 81, 138);
+}
+
+#loadingMessage {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
 }
