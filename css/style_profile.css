@@ -1,0 +1,109 @@
+body {
+    background-image: url("../images/infa_4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+
+    font-family: Arial, sans-serif;
+}
+
+
+
+.Y {
+    width: 750px;
+    background: white;
+    border-radius: 20px;
+    padding: 25px 35px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+
+
+
+
+.Y h1 {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    border-bottom: 2px solid #000;
+}
+
+
+
+.group-rating h4 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline; 
+    border-bottom: 1px solid #000;
+}
+.group-rating {
+    font-size: 17px;
+    border-bottom: 2px solid #000;
+}
+
+
+
+
+.homework h4 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline; 
+    border-bottom: 1px solid #000;
+    
+}
+.homework {
+    border-bottom: 2px solid #000;
+    font-size: 17px;
+}
+
+
+
+.teacher-message h4 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline; 
+    border-bottom: 1px solid #000;
+}
+.teacher-message{
+    font-size: 17px;
+    border-bottom: 2px solid #000;
+}
+
+
+
+
+
+.all-rating h4{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline; 
+    border-bottom: 1px solid #000;
+}
+.all-rating{
+    font-size: 17px;
+}
+
+
+
+#all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-150px);
+}
+
+
+
+#me {
+    font-weight: bold;
+    color: #0b61d8;
+}

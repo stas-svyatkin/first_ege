@@ -62,9 +62,7 @@ registerBtn.addEventListener("click", async () => {
         window.location.href = "profile.html";
 
     } catch (error) {
-    console.log(error);
-    console.log(error.code);
-    console.log(error.message);
+    
 
     if (error.code === "auth/weak-password" ||
         error.code === "auth/missing-password"
