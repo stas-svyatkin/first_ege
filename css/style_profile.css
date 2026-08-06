@@ -18,15 +18,9 @@ body {
     background: white;
     border-radius: 20px;
     padding: 25px 35px;
-    box-shadow: 0 8px 25px rgba(0,0,0,.15);
 }
-
-
-
-
-
 .Y h1 {
-    width: 600px;
+    width: 750px;
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -35,60 +29,12 @@ body {
 
 
 
-.group-rating h4 {
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline; 
-    border-bottom: 1px solid #000;
-}
-.group-rating {
+
+.card {
     font-size: 17px;
     border-bottom: 2px solid #000;
 }
-
-
-
-
-.homework h4 {
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline; 
-    border-bottom: 1px solid #000;
-    
-}
-.homework {
-    border-bottom: 2px solid #000;
-    font-size: 17px;
-}
-
-
-
-.teacher-message h4 {
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline; 
-    border-bottom: 1px solid #000;
-}
-.teacher-message{
-    font-size: 17px;
-    border-bottom: 2px solid #000;
-}
-
-
-
-
-
-.all-rating h4{
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline; 
-    border-bottom: 1px solid #000;
-}
-.all-rating{
+.card_last {
     font-size: 17px;
 }
 
@@ -98,9 +44,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-150px);
+    transform: translateY(-80px);
 }
-
 
 
 #me {
