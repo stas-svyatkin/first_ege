@@ -1,0 +1,54 @@
+body {
+    background-image: url("../images/infa_4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+
+    font-family: Arial, sans-serif;
+}
+
+
+
+.Y {
+    width: 750px;
+    background: white;
+    border-radius: 20px;
+    padding: 25px 35px;
+}
+.Y h1 {
+    width: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    border-bottom: 2px solid #000;
+}
+
+
+
+
+.card {
+    font-size: 17px;
+    border-bottom: 2px solid #000;
+}
+.card_last {
+    font-size: 17px;
+}
+
+
+
+#all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-80px);
+}
+
+
+#me {
+    font-weight: bold;
+    color: #0b61d8;
+}
