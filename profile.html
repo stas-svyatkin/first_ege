@@ -3,65 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style_profile.css">
-    <title>рейтинг</title>
+    <title>Профиль</title>
 </head>
 <body>
 <div id="all">
     <div class="Y">
-    <h1>🏆 Рейтинг</h1>
-
+        <h1>🏆 Рейтинг</h1>
         <div class="card">
             <h2>Ваша группа</h2>
             <ol>
-                <li id="me">Стас -</li>
-                <li>САША - </li>
-                <li>Леха - </li>
+                <li id="me">Загрузка...</li>
+                <li>САША -</li>
+                <li>Леха -</li>
             </ol>
-            <!-- Рейтинг группы -->
         </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <div class="card">
             <h2>📢 Домашнее задание</h2>
-            <!-- Домашнее задание -->
             <p>Сделать номер 2</p>
-            <p>Осталось : </p>
+            <p>Осталось :</p>
         </div>
-        
-
-        
-        
-        
-        
         <div class="card">
             <h2>💬 Сообщение преподавателя</h2>
-            <!-- Сообщение преподавателя -->
-            <p>У тебя ошибки здесь и здесь</p>
+            <p id="teacherMessage">Загрузка...</p>
         </div>
-        
-        
-        
-        
-        
-        
-        
         <div class="card_last">
             <h2>🌍 Общий рейтинг учеников</h2>
             <ol>
-                <li id="me">Стас -</li>
-                <li>САША - </li>
-                <li>Леха - </li>
+                <li id="me2">Загрузка...</li>
+                <li>САША -</li>
+                <li>Леха -</li>
             </ol>
-            <!-- Общий рейтинг -->
         </div>
     </div>
 </div>
+
+<script type="module">
+import { app, db } from "./js/firebase.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+import { doc, getDoc } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+
+const auth = getAuth(app);
+const me = document.getElementById("me");
+const me2 = document.getElementById("me2");
+const teacherMessage = document.getElementById("teacherMessage");
+
+onAuthStateChanged(auth, async (user) => {
+    if (!user) {
+        window.location.href = "index.html";
+        return;
+    }
+
+    try {
+        const userSnapshot = await getDoc(doc(db, "users", user.uid));
+
+        if (!userSnapshot.exists()) {
+            alert("Данные пользователя не найдены");
+            window.location.href = "index.html";
+            return;
+        }
+
+        const userData = userSnapshot.data();
+        const login = userData.login || "Пользователь";
+        const points = userData.points ?? 0;
+        const message = userData.teacher_message || "Сообщений пока нет";
+
+        me.textContent = `${login} — ${points} ⭐`;
+        me2.textContent = `${login} — ${points} ⭐`;
+        teacherMessage.textContent = message;
+    } catch (error) {
+        console.error(error);
+        alert("Не удалось загрузить данные профиля");
+    }
+});
+</script>
 </body>
 </html>

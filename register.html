@@ -2,28 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация</title>
-
     <link rel="stylesheet" href="css/style_index-profile.css">
 </head>
-
 <body>
-
 <div class="login">
     <h1>Регистрация</h1>
-    <input id="login" type="text" placeholder="Логин"> <br>
-    <input id="email" type="email" placeholder="Email">
-    <br>
-    <input id="password" type="password" placeholder="Пароль">
-    <br>
-    <button id="registerBtn">
-        Зарегистрироваться
-    </button>
+    <input id="login" type="text" placeholder="Логин" autocomplete="username">
+    <input id="email" type="email" placeholder="Email" autocomplete="email">
+    <input id="password" type="password" placeholder="Пароль" autocomplete="new-password">
+    <input id="passwordRepeat" type="password" placeholder="Повторите пароль" autocomplete="new-password">
+    <button id="registerBtn">Зарегистрироваться</button>
     <a class="new_ac" href="index.html">уже есть аккаунт</a>
-
 </div>
-
 <script type="module" src="js/register.js"></script>
-
 </body>
 </html>

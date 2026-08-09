@@ -1,0 +1,22 @@
+rules_version = '2';
+
+service cloud.firestore {
+    match /databases/{database}/documents {
+
+        match /users/{userId} {
+            // Авторизованный пользователь может читать свой документ.
+            // Для входа по логину ниже нужен публичный поиск логина.
+            allow read: if request.auth != null
+                        && request.auth.uid == userId;
+
+            allow create: if request.auth != null
+                          && request.auth.uid == userId;
+
+            allow update: if request.auth != null
+                          && request.auth.uid == userId;
+
+            allow delete: if request.auth != null
+                          && request.auth.uid == userId;
+        }
+    }
+}
