@@ -1,0 +1,123 @@
+body {
+    background-image: url("../images/infa_3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 110vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* Белая карточка */
+
+.login {
+
+    background-color: white;
+
+    padding: 50px;
+
+    border-radius: 20px;
+
+    width: 380px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+
+    box-sizing: border-box;
+    transform: translateY(-100px);
+}
+
+
+/* Заголовок */
+
+.login h1 {
+
+    color: black;
+
+    text-align: center;
+
+    font-size: 35px;
+
+    margin: 0 0 10px 0;
+}
+
+
+/* Поля */
+
+.login input {
+
+    width: 100%;
+
+    height: 45px;
+
+    font-size: 18px;
+
+    padding-left: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+}
+
+
+/* Кнопка */
+
+.login button {
+
+    width: 100%;
+
+    height: 55px;
+
+    font-size: 28px;
+
+    background-color: rgb(59,130,246);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 22px;
+
+    cursor: pointer;
+
+    transform: translateY(10px);
+}
+
+
+.login button:hover {
+
+    background-color: #1b65c2;
+
+}
+
+
+/* Ссылка */
+
+.new_ac {
+
+    color: #1b65c2;
+
+    font-size: 18px;
+
+    text-decoration: underline;
+    transform: translateY(25px);
+
+}
+
+
+.new_ac:hover {
+
+    color: rgb(138,81,138);
+
+}

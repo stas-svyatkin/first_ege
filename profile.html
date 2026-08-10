@@ -5,76 +5,41 @@
     <link rel="stylesheet" href="css/style_profile.css">
     <title>Профиль</title>
 </head>
+
 <body>
 <div id="all">
     <div class="Y">
         <h1>🏆 Рейтинг</h1>
         <div class="card">
-            <h2>Ваша группа</h2>
-            <ol>
-                <li id="me">Загрузка...</li>
-                <li>САША -</li>
-                <li>Леха -</li>
+            <h2 id="grouper">Ваша группа: ...</h2>
+            <ol id="groupRating">
+                <li></li>
             </ol>
         </div>
+
+
         <div class="card">
             <h2>📢 Домашнее задание</h2>
             <p>Сделать номер 2</p>
             <p>Осталось :</p>
         </div>
+
+
         <div class="card">
             <h2>💬 Сообщение преподавателя</h2>
             <p id="teacherMessage">Загрузка...</p>
         </div>
+
+
         <div class="card_last">
             <h2>🌍 Общий рейтинг учеников</h2>
-            <ol>
+            <ol id="allRating">
                 <li id="me2">Загрузка...</li>
-                <li>САША -</li>
-                <li>Леха -</li>
             </ol>
         </div>
+
     </div>
 </div>
-
-<script type="module">
-import { app, db } from "./js/firebase.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
-import { doc, getDoc } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
-
-const auth = getAuth(app);
-const me = document.getElementById("me");
-const me2 = document.getElementById("me2");
-const teacherMessage = document.getElementById("teacherMessage");
-
-onAuthStateChanged(auth, async (user) => {
-    if (!user) {
-        window.location.href = "index.html";
-        return;
-    }
-
-    try {
-        const userSnapshot = await getDoc(doc(db, "users", user.uid));
-
-        if (!userSnapshot.exists()) {
-            alert("Данные пользователя не найдены");
-            window.location.href = "index.html";
-            return;
-        }
-
-        const userData = userSnapshot.data();
-        const login = userData.login || "Пользователь";
-        const points = userData.points ?? 0;
-        const message = userData.teacher_message || "Сообщений пока нет";
-
-        me.textContent = `${login} — ${points} ⭐`;
-        me2.textContent = `${login} — ${points} ⭐`;
-        teacherMessage.textContent = message;
-    } catch (error) {
-        console.error(error);
-        alert("Не удалось загрузить данные профиля");
-    }
-});
-</script>
+<script type="module" src="js/profile.js"></script>
 </body>
 </html>

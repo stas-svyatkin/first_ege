@@ -31,8 +31,8 @@ registerBtn.addEventListener("click", async () => {
         alert("Введите логин");
         return;
     }
-    if (login.length < 6) {
-        alert("Логин должен содержать минимум 6 символа");
+    if (login.length < 3) {
+        alert("Логин должен содержать минимум 3 символа");
         return;
     }
     if (login.length > 20) {
