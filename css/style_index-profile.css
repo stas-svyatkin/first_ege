@@ -250,3 +250,35 @@ body {
     }
 }
 
+/* ========================= */
+/* Очень маленькие телефоны */
+/* ========================= */
+
+@media (max-width: 360px) {
+
+    .login {
+        padding: 20px 14px;
+
+        transform: translateY(-10px);
+    }
+
+    .login h1 {
+        font-size: 21px;
+    }
+
+    .login input {
+        height: 42px;
+
+        font-size: 15px;
+    }
+
+    .login button {
+        font-size: 20px;
+    }
+
+    .new_ac {
+        font-size: 15px;
+    }
+}
+
+

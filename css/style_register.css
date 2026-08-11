@@ -218,4 +218,17 @@ body {
     }
 }
 
+/* Очень маленькие телефоны */ 
+@media (max-width: 360px) { 
+    .login { padding: 20px 14px; 
+    } 
+    .login h1 { font-size: 22px; 
+    } 
+    .login input { font-size: 15px; 
+    } 
+    .login button { font-size: 19px; 
+    } 
+    .new_ac { font-size: 15px; 
+    } 
+}
 
