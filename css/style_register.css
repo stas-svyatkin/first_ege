@@ -172,7 +172,11 @@ body {
 @media (max-width: 500px) {
 
     body {
-        padding: 15px 10px;
+        max-width: calc(100% - 20px);
+
+        padding: 15px 18px;
+
+        border-radius: 15px;
 
         background-attachment: scroll;
     }
@@ -220,7 +224,12 @@ body {
 
 /* Очень маленькие телефоны */ 
 @media (max-width: 360px) { 
-    .login { padding: 20px 14px; 
+    .login { 
+        max-width: calc(100% - 20px);
+
+        padding: 15px 18px;
+
+        border-radius: 15px; 
     } 
     .login h1 { font-size: 22px; 
     } 
