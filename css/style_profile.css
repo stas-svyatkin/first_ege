@@ -1,69 +1,108 @@
 body {
-    background-image: url("../images/infa_4.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 110vh;
+    background-image: url("../images/infa_3.png");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #eef5ff;
+
+    min-height: 100vh;
 
     font-family: Arial, sans-serif;
 }
 
 
+/* Основная белая карточка */
 
 .Y {
     width: 750px;
+    max-width: calc(100% - 40px);
+
     background: white;
+
     border-radius: 20px;
+
     padding: 25px 35px;
+
+    box-sizing: border-box;
 }
+
+
+/* Заголовок */
+
 .Y h1 {
-    width: 750px;
+    width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: baseline;
+
     border-bottom: 2px solid #000;
+
+    padding-bottom: 10px;
 }
 
 
-
+/* Обычные блоки */
 
 .card {
     font-size: 17px;
+
     border-bottom: 2px solid #000;
+
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
+
+
+/* Последний блок */
+
 .card_last {
     font-size: 17px;
 }
 
 
+/* Центрирование */
 
 #all {
     display: flex;
+
     justify-content: center;
-    align-items: center;
-    transform: translateY(-80px);
+    align-items: flex-start;
+
+    min-height: 100vh;
+
+    padding-top: 80px;
+    padding-bottom: 40px;
+
+    box-sizing: border-box;
 }
 
 
-#me {
-    font-weight: bold;
-    color: #0b61d8;
-}
+/* Текущий пользователь */
+
+#me,
 #me2 {
     font-weight: bold;
     color: #0b61d8;
 }
-#group{
+
+
+/* Название группы */
+
+#group {
     font-size: 25px;
 }
+
+
+/* Подсветка текущего пользователя */
+
 .my-rating {
+    background-color: #dbeafe;
 
-    background-color: #dbeafe; /* голубой фон */
-
-    border: 2px solid #3b82f6; /* синяя рамка */
+    border: 2px solid #3b82f6;
 
     border-radius: 12px;
 
@@ -71,4 +110,49 @@ body {
 
     color: #1d4ed8;
 
+    font-weight: bold;
+
+    box-sizing: border-box;
+}
+
+
+/* Для планшетов и небольших экранов */
+
+@media (max-width: 800px) {
+
+    .Y {
+        max-width: calc(100% - 30px);
+        padding: 20px 25px;
+    }
+
+    #all {
+        padding-top: 40px;
+    }
+}
+
+
+/* Для телефона */
+
+@media (max-width: 500px) {
+
+    .Y {
+        max-width: calc(100% - 20px);
+
+        padding: 15px 18px;
+
+        border-radius: 15px;
+    }
+
+    .Y h1 {
+        font-size: 25px;
+    }
+
+    .card,
+    .card_last {
+        font-size: 15px;
+    }
+
+    #all {
+        padding-top: 20px;
+    }
 }
