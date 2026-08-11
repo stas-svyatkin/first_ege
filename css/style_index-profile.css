@@ -1,72 +1,257 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+
+    min-height: 100vh;
+
     background-image: url("../images/infa_3.png");
     background-size: cover;
+    background-position: center top;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #eef5ff;
+
+    font-family: Arial, sans-serif;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 110vh;
 
-    font-family: Arial, sans-serif;
+    padding: 30px 20px;
 }
 
-.login{
+
+/* ========================= */
+/* Карточка авторизации */
+/* ========================= */
+
+.login {
+    width: 400px;
+    max-width: 100%;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
     display: flex;
     flex-direction: column;
+
     gap: 15px;
-    transform: translateY(-150px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    transform: translateY(-80px);
 }
 
 
-
-
-
-
-
+/* ========================= */
+/* Заголовок */
+/* ========================= */
 
 .login h1 {
-    color:black;
+    color: black;
+
     text-align: center;
+
     font-size: 30px;
+
+    margin: 0 0 10px 0;
 }
 
+
+/* ========================= */
+/* Поля */
+/* ========================= */
+
 .login input {
-    width: 350px;
-    font-size: 20px;
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    font-size: 18px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
 }
-.login button{
-    font-size: 33px;
+
+
+.login input:focus {
+    border-color: rgb(59, 130, 246);
+}
+
+
+/* ========================= */
+/* Кнопка */
+/* ========================= */
+
+.login button {
+    width: 100%;
+
+    min-height: 52px;
+
+    padding: 5px 10px;
+
+    font-size: 30px;
+
     background-color: rgb(59, 130, 246);
-    transform: translateY(-5px);
-    border-radius: 22px;
-    padding: 3px;
+
     color: white;
+
+    border: none;
+
+    border-radius: 22px;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s;
 }
-button:hover {
+
+
+.login button:hover {
     background-color: #1b65c2;
 }
 
-.login {
-    background-color:white;
-    padding: 40px;
-    border-radius: 20px;
-}
-.new_ac{
+
+/* ========================= */
+/* Ссылка */
+/* ========================= */
+
+.new_ac {
     display: flex;
+
     justify-content: center;
+
     color: #1b65c2;
+
     font-size: 18px;
-    transform: translateY(10px);
-    
+
+    text-align: center;
+
+    margin-top: 5px;
 }
-.new_ac:hover{
+
+
+.new_ac:hover {
     color: rgb(138, 81, 138);
 }
 
+
+/* ========================= */
+/* Сообщение загрузки */
+/* ========================= */
+
 #loadingMessage {
     color: white;
+
     text-align: center;
+
     margin-top: 15px;
+
     font-size: 16px;
 }
+
+
+/* ========================= */
+/* Планшет */
+/* ========================= */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    .login {
+        width: 400px;
+
+        padding: 35px;
+
+        transform: translateY(-50px);
+    }
+
+    .login h1 {
+        font-size: 28px;
+    }
+
+    .login input {
+        font-size: 17px;
+    }
+
+    .login button {
+        font-size: 27px;
+    }
+}
+
+
+/* ========================= */
+/* Телефон */
+/* ========================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px 10px;
+
+        background-attachment: scroll;
+    }
+
+    .login {
+        width: 100%;
+
+        padding: 25px 18px;
+
+        border-radius: 15px;
+
+        gap: 13px;
+
+        transform: translateY(-20px);
+    }
+
+    .login h1 {
+        font-size: 24px;
+
+        margin-bottom: 8px;
+    }
+
+    .login input {
+        width: 100%;
+
+        height: 45px;
+
+        padding: 0 12px;
+
+        font-size: 16px;
+    }
+
+    .login button {
+        width: 100%;
+
+        min-height: 48px;
+
+        font-size: 22px;
+
+        border-radius: 16px;
+    }
+
+    .new_ac {
+        font-size: 16px;
+
+        margin-top: 5px;
+    }
+
+    #loadingMessage {
+        font-size: 14px;
+    }
+}
+
